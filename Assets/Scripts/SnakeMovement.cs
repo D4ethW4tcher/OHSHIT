@@ -11,6 +11,9 @@ public class SnakeMovement : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.UpArrow)) {
+            gridPosition.y += 1;
+        }
         transform.position = new Vector3(gridPosition.x,gridPosition.y);
     }
 }
