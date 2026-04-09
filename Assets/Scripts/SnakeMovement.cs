@@ -52,14 +52,14 @@ public class SnakeMovement : MonoBehaviour
         GridMoveTimer += Time.deltaTime;
         if (GridMoveTimer >= GridMoveTimerMax){
             gridPosition += gridMoveDirection;
-            gridMoveTimer -= GridMoveTimerMax;
+            GridMoveTimer -= GridMoveTimerMax;
 
             transform.position = new Vector3(gridPosition.x,gridPosition.y);
             transform.eulerAngles = new Vector3(0,0,GetAngleFromVector(gridMoveDirection) -90);
         }
         
     }
-    private flaot GetAngleFromVector(Vector2Int dir) {
+    private float GetAngleFromVector(Vector2Int dir) {
         float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         if (n < 0) n += 360;
         return n;
