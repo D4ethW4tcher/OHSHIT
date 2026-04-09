@@ -1,16 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SnakeMovement : MonoBehaviour
 {
+    private Vector2Int gridPosition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+    private void Awake(){
+        gridPosition = new Vector2Int(10, 10);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        transform.position = new Vector3(gridPosition.x,gridPosition.y);
     }
 }
