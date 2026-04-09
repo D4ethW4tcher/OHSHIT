@@ -55,7 +55,7 @@ public class SnakeMovement : MonoBehaviour
             gridMoveTimer -= GridMoveTimerMax;
 
             transform.position = new Vector3(gridPosition.x,gridPosition.y);
-            transform.eulerAngles = new Vector3 =(0,0,GetAngleFromVector(gridMoveDirection) -90);
+            transform.eulerAngles = new Vector3(0,0,GetAngleFromVector(gridMoveDirection) -90);
         }
         
     }
