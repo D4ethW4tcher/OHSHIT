@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: e116766d7cfe0662799e4d35e3109218
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - snakeHeadSprite: {instanceID: 0}
+  - foodSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
