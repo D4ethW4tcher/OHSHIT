@@ -12,7 +12,7 @@ public class FoodManager : MonoBehaviour
         this.width = width;
         this.height = height;
 
-        SpawnFood();
+        //SpawnFood();
 
         InvokeRepeating(nameof(SpawnFood), 1f, 1f);
     }
@@ -21,5 +21,14 @@ public class FoodManager : MonoBehaviour
         GameObject foodGameObject = new GameObject("Food", typeof(SpriteRenderer));
         foodGameObject.GetComponent<SpriteRenderer>().sprite = GameAssets.i.foodSprite;
         foodGameObject.transform.position = new Vector3(foodGridPosition.x, foodGridPosition.y);
+    }
+    public bool TrySnakeEatFood(Vector2Int snakeGridPosition){
+        if (snakeGridPosition == foodGridPosition) {
+            object.Destroy(foodGameObject);
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

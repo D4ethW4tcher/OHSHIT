@@ -8,12 +8,17 @@ public class SnakeMovement : MonoBehaviour
     private Vector2Int gridPosition;
     private float GridMoveTimer;
     private float GridMoveTimerMax;
+    private int  snakeBodySize;
+    private list<Vector2Int> snakeMovePositionList;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake(){
         gridPosition = new Vector2Int(10, 10);
         GridMoveTimerMax = .5f;
         GridMoveTimer = GridMoveTimerMax;
         gridMoveDirection = new Vector2Int(1,0);
+
+        snakeMovePositionList = new List<Vector2Int>();
+        snakeBodySize = 0;
     }
     private void Update()
     {
@@ -54,8 +59,28 @@ public class SnakeMovement : MonoBehaviour
             gridPosition += gridMoveDirection;
             GridMoveTimer -= GridMoveTimerMax;
 
+            snakeMovePositionList.Insert(0, gridPosition);
+            gridPosition+= gridMoveDirection;
+
+            bool snakeAteFood = FoodManager.TrySnakeEatFood(gridPosition);
+            if (snakeAteFood){
+                //Snake ate food, grow body.
+                snakeBodySize++;
+            }
+
+            if (snakeMovePositionList.count >= snakeBodySize + 1) {
+                snakeMovePositionList.RemoveAt(snakeMovePositionList - 1);
+            }
+
+            for (int i = 0; i < snakeMovePositionList.Count; i++){
+                Vector2Int SnkaeMovePosition = snakeMovePositionList[1];
+                World_Sprite worldSprite = World_Sprite.Create(new Vector3(snakeMovePosition.x, snakeMovePosition.y), Vector3.one * .5f, Color.white);
+                FunctionTimer.Creaet(worldSprite.DestroySelf, gridMoveTimerMax);
+            }
+
             transform.position = new Vector3(gridPosition.x,gridPosition.y);
             transform.eulerAngles = new Vector3(0,0,GetAngleFromVector(gridMoveDirection) -90);
+
         }
         
     }
