@@ -12,7 +12,7 @@ public class FoodManager : MonoBehaviour
         this.width = width;
         this.height = height;
 
-        //SpawnFood();
+        SpawnFood();
 
         InvokeRepeating(nameof(SpawnFood), 1f, 1f);
     }
