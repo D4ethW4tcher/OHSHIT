@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public boolean isPressed;
+    public bool isPressed;
         
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
