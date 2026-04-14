@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public class PressurePlate : MonoBehaviour
+public class NextLevel : MonoBehaviour
 {
-    public boolean isPressed;
-        
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,6 +11,6 @@ public class PressurePlate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // if ()
+        
     }
 }
