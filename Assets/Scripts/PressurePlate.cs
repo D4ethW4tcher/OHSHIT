@@ -2,12 +2,17 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public gameObject PressurePlates;
+    public static PressurePlates<PressurePlate>
+
+    void OnEnable()
+    {
+        PressurePlates.Add(this);
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        PressurePlates = (PressurePlate)FindObjectOfType(typeof(PressurePlate));
+        
     }
 
     // Update is called once per frame
