@@ -101,3 +101,4 @@ InitTestScene*.unity*
 # weird .slnx files
 *.slnx
 .vscode/settings.json
+.vscode/settings.json
