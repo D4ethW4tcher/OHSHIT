@@ -100,8 +100,8 @@ InitTestScene*.unity*
 
 # weird .slnx files
 *.slnx
-#settings 
-settings.json
+#settings?
+*.json
 #meta files?
 *.cs.meta
 

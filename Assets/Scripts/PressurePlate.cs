@@ -16,12 +16,8 @@ public class PressurePlate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OnTriggerEnter {
-            isPressed = true;
-        }
+        OnTriggerEnter (isPressed = true;)
 
-        OnTriggerExit {
-            isPressed = false;
-        } 
+        OnTriggerExit (isPressed = false;)
     }
 }
