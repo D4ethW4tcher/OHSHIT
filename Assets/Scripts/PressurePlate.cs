@@ -6,12 +6,7 @@ public class PressurePlate : MonoBehaviour
     public bool isPressed = false;
 
     //Functions
-    private void OnTriggerEnter {
-        isPressed = true;
-    }
-    private void OnTriggerExit {
-        isPressed = false;
-    }  
+     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +16,12 @@ public class PressurePlate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        private void OnTriggerEnter {
+            isPressed = true;
+        }
+        
+        private void OnTriggerExit {
+            isPressed = false;
+        } 
     }
 }
