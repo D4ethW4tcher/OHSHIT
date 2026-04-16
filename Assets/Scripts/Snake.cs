@@ -89,8 +89,8 @@ public class Snake : MonoBehaviour
             yield return new WaitForSeconds(moveDelay);
         }
 
-        audio.clip = death;
-        audio.Play();
+        GetComponent<AudioSource>().clip = death;
+        GetComponent<AudioSource>().Play();
 
         yield return StartCoroutine(ScreenDeath.Instance.FlashDeathScreen());
 
@@ -154,8 +154,8 @@ public class Snake : MonoBehaviour
                         }
                     }
 
-                    audio.clip = (audio.clip == move1) ? move2 : move1;
-                    audio.Play();
+                    GetComponent<AudioSource>().clip = (GetComponent<AudioSource>().clip == move1) ? move2 : move1;
+                    GetComponent<AudioSource>().Play();
                 }
                 break;
 
@@ -195,8 +195,8 @@ public class Snake : MonoBehaviour
                         }
                     }
 
-                    audio.clip = (audio.clip == move1) ? move2 : move1;
-                    audio.Play();
+                    GetComponent<AudioSource>().clip = (GetComponent<AudioSource>().clip == move1) ? move2 : move1;
+                    GetComponent<AudioSource>().Play();
                 }
                 break;
 
@@ -235,8 +235,8 @@ public class Snake : MonoBehaviour
                         }
                     }
 
-                    audio.clip = (audio.clip == move1) ? move2 : move1;
-                    audio.Play();
+                    GetComponent<AudioSource>().clip = (GetComponent<AudioSource>().clip == move1) ? move2 : move1;
+                    GetComponent<AudioSource>().Play();
                 }
                 break;
 
@@ -275,8 +275,8 @@ public class Snake : MonoBehaviour
                         }
                     }
 
-                    audio.clip = (audio.clip == move1) ? move2 : move1;
-                    audio.Play();
+                    GetComponent<AudioSource>().clip = (GetComponent<AudioSource>().clip == move1) ? move2 : move1;
+                    GetComponent<AudioSource>().Play();
                 }
                 break;
         }
@@ -396,9 +396,9 @@ public class Snake : MonoBehaviour
             move2 = Resources.Load("Sounds/Move2 Blip") as AudioClip;
             death = Resources.Load("Sounds/Death") as AudioClip;
             gameObject.AddComponent<AudioSource>();
-            audio.playOnAwake = false;
-            audio.loop = false;
-            audio.clip = move1;
+            GetComponent<AudioSource>().playOnAwake = false;
+            GetComponent<AudioSource>().loop = false;
+            GetComponent<AudioSource>().clip = move1;
         }
 
         transform.position = Vector3.zero;

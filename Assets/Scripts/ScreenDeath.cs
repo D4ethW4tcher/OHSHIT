@@ -1,12 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class ScreenDeath : MonoBehaviour
 {
-    private static ScreenDeath instance = null;
-    private GUITexture deathScreenBackground;
-    private Color deathColor;
-    private Color invisColor;
+    private static ScreenDeath instance;
 
     public static ScreenDeath Instance
     {
@@ -14,58 +12,70 @@ public class ScreenDeath : MonoBehaviour
         {
             if (instance == null)
             {
-                instance = new GameObject("ScreenDeath").AddComponent<ScreenDeath>();
+                GameObject obj = new GameObject("ScreenDeath");
+                instance = obj.AddComponent<ScreenDeath>();
+                instance.Initialize();
             }
             return instance;
         }
     }
 
-    public void OnApplicationQuit()
-    {
-        DestroyInstance();
-    }
+    private Image deathScreenImage;
 
-    public void DestroyInstance()
+    private Color deathColor;
+    private Color invisColor;
+
+    public void Initialize()
     {
-        print("Screen Death Instance destroyed");
-        instance = null;
+        Debug.Log("ScreenDeath initialized");
+
+        // Create Canvas
+        GameObject canvasObj = new GameObject("DeathCanvas");
+        Canvas canvas = canvasObj.AddComponent<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+
+        canvasObj.AddComponent<CanvasScaler>();
+        canvasObj.AddComponent<GraphicRaycaster>();
+
+        canvas.sortingOrder = 200; // ensure it renders on top
+
+        // Create full-screen Image
+        GameObject imgObj = new GameObject("DeathScreen");
+        imgObj.transform.SetParent(canvasObj.transform, false);
+
+        deathScreenImage = imgObj.AddComponent<Image>();
+
+        // Full screen stretch
+        RectTransform rect = deathScreenImage.GetComponent<RectTransform>();
+        rect.anchorMin = Vector2.zero;
+        rect.anchorMax = Vector2.one;
+        rect.offsetMin = Vector2.zero;
+        rect.offsetMax = Vector2.zero;
+
+        // Color setup
+        deathColor = new Color(1f, 0f, 0f, 0.3f);   // red semi-transparent
+        invisColor = new Color(1f, 0f, 0f, 0f);     // invisible
+
+        deathScreenImage.color = invisColor;
     }
 
     public IEnumerator FlashDeathScreen()
     {
-        deathScreenBackground.color = deathColor;
-        yield return new WaitForSeconds(0.1f);
-        deathScreenBackground.color = invisColor;
-        yield return new WaitForSeconds(0.1f);
-        deathScreenBackground.color = deathColor;
-        yield return new WaitForSeconds(0.1f);
-        deathScreenBackground.color = invisColor;
-        yield return new WaitForSeconds(0.1f);
-        deathScreenBackground.color = deathColor;
-        yield return new WaitForSeconds(0.1f);
-        deathScreenBackground.color = invisColor;
-        yield return new WaitForSeconds(0.1f);
-        deathScreenBackground.color = deathColor;
-        yield return new WaitForSeconds(0.1f);
-        deathScreenBackground.color = invisColor;
-        yield return new WaitForSeconds(0.1f);
+        if (deathScreenImage == null)
+            yield break;
+
+        for (int i = 0; i < 4; i++)
+        {
+            deathScreenImage.color = deathColor;
+            yield return new WaitForSeconds(0.1f);
+
+            deathScreenImage.color = invisColor;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
-    public void Initialize()
+    private void OnApplicationQuit()
     {
-        print("ScreenDeath initialized");
-        transform.position = new Vector3(0, 0, 2);
-        transform.rotation = Quaternion.identity;
-        transform.localScale = new Vector3(0.01f, 0.01f, 1.0f);
-
-        deathScreenBackground = gameObject.AddComponent<GUITexture>();
-        Texture2D deathTexture = TextureHelper.Create1x1Texture(Color.red);
-        deathScreenBackground.texture = deathTexture;
-
-        invisColor = new Color(deathScreenBackground.color.r, deathScreenBackground.color.g, deathScreenBackground.color.b, 0.0f);
-        deathColor = new Color(deathScreenBackground.color.r, deathScreenBackground.color.g, deathScreenBackground.color.b, 0.3f);
-
-        deathScreenBackground.pixelInset = new Rect(0, 0, 1024, 768);
-        deathScreenBackground.color = invisColor;
+        instance = null;
     }
 }

@@ -41,7 +41,7 @@ public class Food : MonoBehaviour
     public void UpdateFood()
     {
         print("Food updated");
-        audio.Play();
+        GetComponent<AudioSource>().Play();
 
         int ranX = Random.Range(0, initXPos.Length);
         int ranY = Random.Range(0, initYPos.Length);
@@ -64,9 +64,9 @@ public class Food : MonoBehaviour
         {
             foodPickup = Resources.Load("Sounds/Food Pickup") as AudioClip;
             gameObject.AddComponent<AudioSource>();
-            audio.playOnAwake = false;
-            audio.loop = false;
-            audio.clip = foodPickup;
+            GetComponent<AudioSource>().playOnAwake = false;
+            GetComponent<AudioSource>().loop = false;
+            GetComponent<AudioSource>().clip = foodPickup;
         }
 
         transform.position = Vector3.zero;

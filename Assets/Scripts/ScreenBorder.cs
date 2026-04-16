@@ -1,9 +1,9 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 
 public class ScreenBorder : MonoBehaviour
 {
-    private static ScreenBorder instance = null;
+    private static ScreenBorder instance;
 
     public static ScreenBorder Instance
     {
@@ -11,33 +11,51 @@ public class ScreenBorder : MonoBehaviour
         {
             if (instance == null)
             {
-                instance = new GameObject("ScreenBorder").AddComponent<ScreenBorder>();
+                GameObject obj = new GameObject("ScreenBorder");
+                instance = obj.AddComponent<ScreenBorder>();
+                instance.Initialize();
             }
             return instance;
         }
     }
 
-    public void OnApplicationQuit()
-    {
-        DestroyInstance();
-    }
-
-    public void DestroyInstance()
-    {
-        print("Screen Border Instance destroyed");
-        instance = null;
-    }
+    private Image borderImage;
 
     public void Initialize()
     {
-        print("ScreenBorder initialized");
-        transform.position = new Vector3(0, 0, -1);
-        transform.rotation = Quaternion.identity;
-        transform.localScale = new Vector3(0.01f, 0.01f, 1.0f);
+        Debug.Log("ScreenBorder initialized");
 
-        GUITexture gameBorderBackground = gameObject.AddComponent<GUITexture>();
-        Texture2D gameBorderTexture = TextureHelper.Create1x1Texture(Color.gray);
-        gameBorderBackground.texture = gameBorderTexture;
-        gameBorderBackground.pixelInset = new Rect(0, 0, 1024, 768);
+        // Create Canvas
+        GameObject canvasObj = new GameObject("BorderCanvas");
+        Canvas canvas = canvasObj.AddComponent<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+
+        canvasObj.AddComponent<CanvasScaler>();
+        canvasObj.AddComponent<GraphicRaycaster>();
+
+        canvas.sortingOrder = 10;
+
+        // Create border object
+        GameObject borderObj = new GameObject("ScreenBorderImage");
+        borderObj.transform.SetParent(canvasObj.transform, false);
+
+        borderImage = borderObj.AddComponent<Image>();
+
+        // Full-screen layout (equivalent to pixelInset full screen)
+        RectTransform rect = borderImage.GetComponent<RectTransform>();
+
+        rect.anchorMin = new Vector2(0, 0);
+        rect.anchorMax = new Vector2(1, 1);
+
+        rect.offsetMin = Vector2.zero;
+        rect.offsetMax = Vector2.zero;
+
+        // Set gray color (replaces TextureHelper.Create1x1Texture(Color.gray))
+        borderImage.color = Color.gray;
+    }
+
+    private void OnApplicationQuit()
+    {
+        instance = null;
     }
 }
