@@ -2,32 +2,15 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    //Variables
     public bool isPressed = false;
 
-    //Functions
-     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        isPressed = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        OnTriggerEnter ()
-        {
-            //comment
-            
-            isPressed = true;
-        }
-
-        OnTriggerExit ()
-        {
-            //comment
-            
-            isPressed = false;
-        }
+        isPressed = false;
     }
 }
