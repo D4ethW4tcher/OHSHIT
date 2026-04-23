@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using System.Collections;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Snake : MonoBehaviour
@@ -26,6 +28,20 @@ public class Snake : MonoBehaviour
     private void Start()
     {
         ResetState();
+        playerInput = GetComponent<PlayerInput>();
+
+        // Grab actions by name from the Input System
+        up      = playerInput.actions["North"];
+        down      = playerInput.actions["South"];
+        left   = playerInput.actions["West"];
+        right = playerInput.actions["East"];
+        
+
+        // Debug to ensure actions are found
+        if (up == null) Debug.LogError("up not found!");
+        if (down == null) Debug.LogError("down not found!");
+        if (stealthAction == null) Debug.LogError("left not found!");
+        if (unlockMouseAction == null) Debug.LogError("right action not found!");
     }
 
     private void Update()
@@ -33,18 +49,18 @@ public class Snake : MonoBehaviour
         // Only allow turning up or down while moving in the x-axis
         if (direction.x != 0f)
         {
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+            if (up.IsPressed) {
                 input = Vector2Int.up;
-            } else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+            } else if (down.IsPressed) {
                 input = Vector2Int.down;
             }
         }
         // Only allow turning left or right while moving in the y-axis
         else if (direction.y != 0f)
         {
-            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
+            if (right.IsPressed) {
                 input = Vector2Int.right;
-            } else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
+            } else if (left.IsPressed) {
                 input = Vector2Int.left;
             }
         }
@@ -102,7 +118,7 @@ public class Snake : MonoBehaviour
 
         // -1 since the head is already in the list
         for (int i = 0; i < initialSize - 1; i++) {
-            Powers();
+            Grow();
         }
     }
 
@@ -123,7 +139,7 @@ public class Snake : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Food"))
         {
-            Powers();
+            Grow();
         }
         else if (other.gameObject.CompareTag("Obstacle"))
         {
