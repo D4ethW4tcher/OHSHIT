@@ -4,16 +4,24 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Snake : MonoBehaviour
 {
+    //variables
     public Transform segmentPrefab;
     public Vector2Int direction = Vector2Int.right;
     public float speed = 20f;
     public float speedMultiplier = 1f;
     public int initialSize = 4;
     public bool moveThroughWalls = false;
-
+    //uhhh something i guess?
     private readonly List<Transform> segments = new List<Transform>();
     private Vector2Int input;
     private float nextUpdate;
+
+    //player input manager
+    private PlayerInput playerInput;
+    private InputAction up;
+    private InputAction down;
+    private InputAction left;
+    private InputAction right;
 
     private void Start()
     {
