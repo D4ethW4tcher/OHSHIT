@@ -12,9 +12,9 @@ public class PowerUps : MonoBehaviour
         }
         if (FileFood.powertype == "Grow")
         {
-            Grow();
+            FileSnake.Grow();
         }
-        if (FIleFood.powertype == "Slow")
+        if (FileFood.powertype == "Slow")
         {
             if (FileSnake.speed >= 10)
             {
