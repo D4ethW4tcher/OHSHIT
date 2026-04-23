@@ -40,8 +40,8 @@ public class Snake : MonoBehaviour
         // Debug to ensure actions are found
         if (up == null) Debug.LogError("up not found!");
         if (down == null) Debug.LogError("down not found!");
-        if (stealthAction == null) Debug.LogError("left not found!");
-        if (unlockMouseAction == null) Debug.LogError("right action not found!");
+        if (left == null) Debug.LogError("left not found!");
+        if (right == null) Debug.LogError("right action not found!");
     }
 
     private void Update()
@@ -49,18 +49,18 @@ public class Snake : MonoBehaviour
         // Only allow turning up or down while moving in the x-axis
         if (direction.x != 0f)
         {
-            if (up.IsPressed) {
+            if (up.IsPressed()) {
                 input = Vector2Int.up;
-            } else if (down.IsPressed) {
+            } else if (down.IsPressed()) {
                 input = Vector2Int.down;
             }
         }
         // Only allow turning left or right while moving in the y-axis
         else if (direction.y != 0f)
         {
-            if (right.IsPressed) {
+            if (right.IsPressed()) {
                 input = Vector2Int.right;
-            } else if (left.IsPressed) {
+            } else if (left.IsPressed()) {
                 input = Vector2Int.left;
             }
         }
