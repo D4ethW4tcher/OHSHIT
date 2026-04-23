@@ -102,7 +102,7 @@ public class Snake : MonoBehaviour
 
         // -1 since the head is already in the list
         for (int i = 0; i < initialSize - 1; i++) {
-            Grow();
+            Powers();
         }
     }
 
@@ -123,7 +123,7 @@ public class Snake : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Food"))
         {
-            Grow();
+            Powers();
         }
         else if (other.gameObject.CompareTag("Obstacle"))
         {
