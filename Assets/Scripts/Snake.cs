@@ -25,6 +25,8 @@ public class Snake : MonoBehaviour
     private InputAction left;
     private InputAction right;
 
+    public PowerUps power;
+
     private void Start()
     {
         ResetState();
@@ -118,7 +120,7 @@ public class Snake : MonoBehaviour
 
         // -1 since the head is already in the list
         for (int i = 0; i < initialSize - 1; i++) {
-            Grow();
+            power.Powers();
         }
     }
 
@@ -139,7 +141,7 @@ public class Snake : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Food"))
         {
-            Grow();
+            power.Powers();
         }
         else if (other.gameObject.CompareTag("Obstacle"))
         {
