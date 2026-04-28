@@ -53,8 +53,10 @@ public class Snake : MonoBehaviour
         {
             if (up.IsPressed()) {
                 input = Vector2Int.up;
+                Debug.Log("Go Up");
             } else if (down.IsPressed()) {
                 input = Vector2Int.down;
+                Debug.Log("Go Down");
             }
         }
         // Only allow turning left or right while moving in the y-axis
@@ -62,8 +64,10 @@ public class Snake : MonoBehaviour
         {
             if (right.IsPressed()) {
                 input = Vector2Int.right;
+                Debug.Log("Go Right");
             } else if (left.IsPressed()) {
                 input = Vector2Int.left;
+                Debug.Log("Go Left");
             }
         }
     }
