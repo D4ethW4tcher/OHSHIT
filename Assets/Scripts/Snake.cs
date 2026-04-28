@@ -164,6 +164,7 @@ public class Snake : MonoBehaviour
                 ResetState();
             }
         }
+        
     }
 
     private void Traverse(Transform wall)
