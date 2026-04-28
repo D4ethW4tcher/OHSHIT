@@ -33,9 +33,9 @@ public class Snake : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
 
         // Grab actions by name from the Input System
-        up      = playerInput.actions["North"];
-        down      = playerInput.actions["South"];
-        left   = playerInput.actions["West"];
+        up = playerInput.actions["North"];
+        down = playerInput.actions["South"];
+        left = playerInput.actions["West"];
         right = playerInput.actions["East"];
         
 
