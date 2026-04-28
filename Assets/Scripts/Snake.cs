@@ -125,7 +125,7 @@ public class Snake : MonoBehaviour
 
         // -1 since the head is already in the list
         for (int i = 0; i < initialSize - 1; i++) {
-            power.Powers();
+            Grow();
         }
     }
 
