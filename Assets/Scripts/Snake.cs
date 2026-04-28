@@ -29,15 +29,16 @@ public class Snake : MonoBehaviour
 
     private void Start()
     {
-        ResetState();
         playerInput = GetComponent<PlayerInput>();
-
-        // Grab actions by name from the Input System
         up = playerInput.actions["North"];
         down = playerInput.actions["South"];
         left = playerInput.actions["West"];
         right = playerInput.actions["East"];
         
+        ResetState();
+
+        // Grab actions by name from the Input System
+
 
         // Debug to ensure actions are found
         if (up == null) Debug.LogError("up not found!");
