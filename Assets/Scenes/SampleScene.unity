@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 63731515}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (1)_0 (8)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 73953256}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 116101447}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (2)_0 (11)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: 148585162}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (4)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 155721247}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (7)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 164354921}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (5)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 181035401}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (2)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1189,7 +1189,7 @@ GameObject:
   - component: {fileID: 194625180}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (13)_0 (1)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1327,7 +1327,7 @@ GameObject:
   - component: {fileID: 206135514}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (13)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1465,7 +1465,7 @@ GameObject:
   - component: {fileID: 241841433}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (20)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1603,7 +1603,7 @@ GameObject:
   - component: {fileID: 257155263}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (10)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1741,7 +1741,7 @@ GameObject:
   - component: {fileID: 274120585}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (1)_0 (2)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1879,7 +1879,7 @@ GameObject:
   - component: {fileID: 284715574}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (12)_0 (1)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2017,7 +2017,7 @@ GameObject:
   - component: {fileID: 323663380}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (15)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2155,7 +2155,7 @@ GameObject:
   - component: {fileID: 353132487}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (14)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2293,7 +2293,7 @@ GameObject:
   - component: {fileID: 385978217}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (18)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2431,7 +2431,7 @@ GameObject:
   - component: {fileID: 391070710}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (7)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2569,7 +2569,7 @@ GameObject:
   - component: {fileID: 391215768}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (8)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2707,7 +2707,7 @@ GameObject:
   - component: {fileID: 425388566}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (16)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3073,7 +3073,7 @@ GameObject:
   - component: {fileID: 537048607}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (15)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3211,7 +3211,7 @@ GameObject:
   - component: {fileID: 554081519}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (11)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3349,7 +3349,7 @@ GameObject:
   - component: {fileID: 611585439}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (2)_0 (5)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3571,7 +3571,7 @@ GameObject:
   - component: {fileID: 685834206}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (6)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3709,7 +3709,7 @@ GameObject:
   - component: {fileID: 687168946}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (11)_0
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3847,7 +3847,7 @@ GameObject:
   - component: {fileID: 759855069}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (9)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3985,7 +3985,7 @@ GameObject:
   - component: {fileID: 770784790}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (19)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4123,7 +4123,7 @@ GameObject:
   - component: {fileID: 800290591}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (1)_0 (7)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4261,7 +4261,7 @@ GameObject:
   - component: {fileID: 834424431}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (1)_0
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4399,7 +4399,7 @@ GameObject:
   - component: {fileID: 866401962}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (22)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4537,7 +4537,7 @@ GameObject:
   - component: {fileID: 891314996}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (2)_0 (6)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4675,7 +4675,7 @@ GameObject:
   - component: {fileID: 913648656}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (11)_0 (1)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4813,7 +4813,7 @@ GameObject:
   - component: {fileID: 985780217}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (5)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4951,7 +4951,7 @@ GameObject:
   - component: {fileID: 1054333086}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (16)_0 (1)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5089,7 +5089,7 @@ GameObject:
   - component: {fileID: 1084092293}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (2)_0 (1)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5227,7 +5227,7 @@ GameObject:
   - component: {fileID: 1101501083}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (1)_0 (3)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5365,7 +5365,7 @@ GameObject:
   - component: {fileID: 1123231818}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (2)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5503,7 +5503,7 @@ GameObject:
   - component: {fileID: 1145807611}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (6)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5641,7 +5641,7 @@ GameObject:
   - component: {fileID: 1176696494}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (17)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5779,7 +5779,7 @@ GameObject:
   - component: {fileID: 1209846296}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (21)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5917,7 +5917,7 @@ GameObject:
   - component: {fileID: 1211913401}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (1)_0 (11)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6055,7 +6055,7 @@ GameObject:
   - component: {fileID: 1229212782}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (17)_0
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6193,7 +6193,7 @@ GameObject:
   - component: {fileID: 1253934547}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (1)_0 (10)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6331,7 +6331,7 @@ GameObject:
   - component: {fileID: 1298385575}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (12)_0
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6560,7 +6560,7 @@ GameObject:
   - component: {fileID: 1419157484}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (3)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6887,7 +6887,7 @@ GameObject:
   - component: {fileID: 1468477354}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (10)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7025,7 +7025,7 @@ GameObject:
   - component: {fileID: 1488706640}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (2)_0 (9)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7163,7 +7163,7 @@ GameObject:
   - component: {fileID: 1522262685}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (14)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7301,7 +7301,7 @@ GameObject:
   - component: {fileID: 1534137545}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (3)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7439,7 +7439,7 @@ GameObject:
   - component: {fileID: 1578099899}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (11)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7577,7 +7577,7 @@ GameObject:
   - component: {fileID: 1643444164}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (4)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7715,7 +7715,7 @@ GameObject:
   - component: {fileID: 1703899397}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (10)_0 (1)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7853,7 +7853,7 @@ GameObject:
   - component: {fileID: 1723637415}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (2)_0 (7)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7991,7 +7991,7 @@ GameObject:
   - component: {fileID: 1728724469}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (3)_0 (12)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8251,7 +8251,7 @@ GameObject:
   - component: {fileID: 1802944158}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (12)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8480,7 +8480,7 @@ GameObject:
   - component: {fileID: 1883580397}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (2)_0 (4)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8618,7 +8618,7 @@ GameObject:
   - component: {fileID: 1885223404}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (11)_0 (2)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8756,7 +8756,7 @@ GameObject:
   - component: {fileID: 1891857172}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (1)_0 (5)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8894,7 +8894,7 @@ GameObject:
   - component: {fileID: 1913577211}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (2)_0 (3)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9214,7 +9214,7 @@ GameObject:
   - component: {fileID: 1956669513}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (1)_0 (4)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9352,7 +9352,7 @@ GameObject:
   - component: {fileID: 1958753189}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (1)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9490,7 +9490,7 @@ GameObject:
   - component: {fileID: 1960428480}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (1)_0 (6)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9628,7 +9628,7 @@ GameObject:
   - component: {fileID: 1974246711}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (2)_0 (8)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9766,7 +9766,7 @@ GameObject:
   - component: {fileID: 2032378572}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (2)_0 (12)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9995,7 +9995,7 @@ GameObject:
   - component: {fileID: 2075195220}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (9)_0 (13)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10133,7 +10133,7 @@ GameObject:
   - component: {fileID: 2114864476}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (2)_0 (10)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10271,7 +10271,7 @@ GameObject:
   - component: {fileID: 2122450574}
   m_Layer: 0
   m_Name: New Piskel (5) (1) (1) (1)_0 (9)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
