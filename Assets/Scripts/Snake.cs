@@ -120,7 +120,7 @@ public class Snake : MonoBehaviour
 
     public void DeathState()
     {
-        SceneManager.LoadScene(MainMenu);
+        SceneManager.LoadScene("MainMenu");
     /*    direction = Vector2Int.right;
         transform.position = Vector3.zero;
 

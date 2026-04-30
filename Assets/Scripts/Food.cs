@@ -4,13 +4,11 @@
 public class Food : MonoBehaviour
 {
     public Collider2D gridArea;
-    private Snake snake;
-    public string powertype = "null";
+    //private Snake snake;
+    public string powertype = "N";
+    [SerializeField] private Snake snake;
 
-    private void Awake()
-    {
-        snake = FindObjectOfType<Snake>();
-    }
+
 
     private void Start()
     {

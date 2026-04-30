@@ -1,17 +1,18 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;  // Keep the using directive
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// Renamed to avoid conflict with UnityEngine.SceneManagement.SceneManager
-public class LevelManager : MonoBehaviour
+
+public class LevelManagerDiff : MonoBehaviour
 {
     private int currentLevel = 0;
     public Button myButton;
-    public PowerUps filePower;
+    [SerializeField] private PowerUps filePower;
 
     void Start()
     {
         myButton.onClick.AddListener(OnButtonClick);
+        filePower.WinState = "N";
     }
 
     void LateUpdate()
@@ -22,10 +23,11 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+
     void LoadNextLevel()
     {
         // Reset win state first to prevent re-triggering
-        filePower.WinState = "";
+        
 
         if (currentLevel == 0)
         {
@@ -37,9 +39,10 @@ public class LevelManager : MonoBehaviour
             currentLevel++;
             SceneManager.LoadScene("SecoundLevel");  // kept your spelling
         }
+        filePower.WinState = "N";
     }
 
-    void OnButtonClick()
+    public void OnButtonClick()
     {
         filePower.WinState = "Win";
     }
