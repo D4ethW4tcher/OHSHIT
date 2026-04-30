@@ -4,6 +4,7 @@ public class PowerUps : MonoBehaviour
 {
     public Food FileFood;
     public Snake FileSnake;
+    public int extraGrowCount = 2;
     public string WinState = "Null";
     public void Powers()
     {
@@ -26,6 +27,14 @@ public class PowerUps : MonoBehaviour
         {
             Debug.Log("you won");
             WinState = "Win";
+        }
+        if (FileFood.powertype == "ExtraGrow")
+        {
+            for (int i = 0; i < extraGrowCount; i++)
+            {
+                FileSnake.Grow();
+            }
+            extraGrowCount += 1;
         }
     }
 }
