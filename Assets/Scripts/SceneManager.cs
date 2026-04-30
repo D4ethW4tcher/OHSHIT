@@ -18,11 +18,11 @@ public class SceneManager : MonoBehaviour
     void LateUpdate()
     {
         if (CurrentLevel == 0 && FilePower.WinState == "Win"){
-            SceneManager.LoadScene("SampleScene")
+            SceneManager.LoadScene("SampleScene");
             CurrentLevel += 1;
         }
         if (CurrentLevel == 1 && FilePower.WinState == "Win"){
-            SceneManager.LoadScene("Secound level");
+            SceneManager.LoadScene("SecoundLevel");
             CurrentLevel += 1;
         }
     }
