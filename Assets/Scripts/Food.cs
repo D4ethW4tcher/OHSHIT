@@ -14,7 +14,7 @@ public class Food : MonoBehaviour
 
     private void Start()
     {
-        RandomizePosition();
+    //    RandomizePosition();
     }
 
     public void RandomizePosition()
