@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Snake : MonoBehaviour
@@ -36,7 +37,7 @@ public class Snake : MonoBehaviour
         right = playerInput.actions["East"];
         
         for (int i = 0; i < initialSize - 1; i++) {
-            Grow();
+           Grow();
         }
 
         // Grab actions by name from the Input System
@@ -78,18 +79,7 @@ public class Snake : MonoBehaviour
                 transform.eulerAngles = Vector3.forward * 90;
             }
         }
-        if (right.WasPressedThisFrame()){
-            
-        }
-        if (left.WasPressedThisFrame()){
-            
-        }
-        if (up.WasPressedThisFrame()){
-            
-        }
-        if (down.WasPressedThisFrame()){
-            
-        }
+        
     }
 
     private void FixedUpdate()
@@ -128,9 +118,10 @@ public class Snake : MonoBehaviour
         segments.Add(segment);
     }
 
-    public void ResetState()
+    public void DeathState()
     {
-        direction = Vector2Int.right;
+        SceneManager.LoadScene(MainMenu);
+    /*    direction = Vector2Int.right;
         transform.position = Vector3.zero;
 
         // Start at 1 to skip destroying the head
@@ -142,10 +133,11 @@ public class Snake : MonoBehaviour
         segments.Clear();
         segments.Add(transform);
 
-        // -1 since the head is already in the list
+       // -1 since the head is already in the list
         for (int i = 0; i < initialSize - 1; i++) {
-            Grow();
+           Grow();
         }
+    */
     }
 
     public bool Occupies(int x, int y)
@@ -169,14 +161,14 @@ public class Snake : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Obstacle"))
         {
-            ResetState();
+            DeathState();
         }
         else if (other.gameObject.CompareTag("Wall"))
         {
             if (moveThroughWalls) {
                 Traverse(other.transform);
             } else {
-                ResetState();
+                DeathState();
             }
         }
         
