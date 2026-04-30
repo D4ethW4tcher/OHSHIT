@@ -1,32 +1,46 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;  // Keep the using directive
 using UnityEngine.UI;
 
-
-public class SceneManager : MonoBehaviour
+// Renamed to avoid conflict with UnityEngine.SceneManagement.SceneManager
+public class LevelManager : MonoBehaviour
 {
-    private int CurrentLevel = 0;
+    private int currentLevel = 0;
     public Button myButton;
-    public PowerUps FilePower;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public PowerUps filePower;
+
     void Start()
     {
         myButton.onClick.AddListener(OnButtonClick);
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
-        if (CurrentLevel == 0 && FilePower.WinState == "Win"){
-            SceneManager.LoadScene("SampleScene");
-            CurrentLevel += 1;
-        }
-        if (CurrentLevel == 1 && FilePower.WinState == "Win"){
-            SceneManager.LoadScene("SecoundLevel");
-            CurrentLevel += 1;
+        if (filePower.WinState == "Win")
+        {
+            LoadNextLevel();
         }
     }
-    void OnButtonClick(){
-        FilePower.WinState = "Win";
+
+    void LoadNextLevel()
+    {
+        // Reset win state first to prevent re-triggering
+        filePower.WinState = "";
+
+        if (currentLevel == 0)
+        {
+            currentLevel++;
+            SceneManager.LoadScene("SampleScene");
+        }
+        else if (currentLevel == 1)
+        {
+            currentLevel++;
+            SceneManager.LoadScene("SecoundLevel");  // kept your spelling
+        }
+    }
+
+    void OnButtonClick()
+    {
+        filePower.WinState = "Win";
     }
 }
