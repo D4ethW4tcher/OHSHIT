@@ -55,11 +55,12 @@ public class Snake : MonoBehaviour
             if (up.IsPressed()) {
                 input = Vector2Int.up;
                 Debug.Log("Go Up");
-                transform.Rotate(0, 0, 0);
+                transform.eulerAngles = Vector3.forward * 0;
             } else if (down.IsPressed()) {
                 input = Vector2Int.down;
                 Debug.Log("Go Down");
-                transform.Rotate(0, 0, 180);
+                transform.eulerAngles = Vector3.forward * 180;
+                
             }
         }
         // Only allow turning left or right while moving in the y-axis
@@ -68,12 +69,24 @@ public class Snake : MonoBehaviour
             if (right.IsPressed()) {
                 input = Vector2Int.right;
                 Debug.Log("Go Right");
-                transform.Rotate(0, -90, 0);
+                transform.eulerAngles = Vector3.forward * -90;
             } else if (left.IsPressed()) {
                 input = Vector2Int.left;
                 Debug.Log("Go Left");
-                transform.Rotate(0, 0, 90);
+                transform.eulerAngles = Vector3.forward * 90;
             }
+        }
+        if (right.WasPressedThisFrame()){
+            
+        }
+        if (left.WasPressedThisFrame()){
+            
+        }
+        if (up.WasPressedThisFrame()){
+            
+        }
+        if (down.WasPressedThisFrame()){
+            
         }
     }
 
