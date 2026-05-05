@@ -37,7 +37,7 @@ public class PowerUps : MonoBehaviour
             }
             extraGrowCount += 1;
         }
-        if (FileFood.powertype == "OpenDoor")
+        if (FileSnake.DoorOpen == "OpenDoor")
         {
             fileDoor.door = true;
             //nothing right now

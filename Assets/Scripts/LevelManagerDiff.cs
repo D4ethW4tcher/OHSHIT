@@ -8,6 +8,7 @@ public class LevelManagerDiff : MonoBehaviour
     private int currentLevel = 0;
     public Button myButton;
     [SerializeField] private PowerUps filePower;
+    public Snake FileSnake;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class LevelManagerDiff : MonoBehaviour
 
     void LateUpdate()
     {
-        if (filePower.WinState == "Win")
+        if (filePower.WinState == "Win" || FileSnake.winning == "Win")
         {
             LoadNextLevel();
         }
@@ -39,7 +40,7 @@ public class LevelManagerDiff : MonoBehaviour
             currentLevel++;
             SceneManager.LoadScene("LevelTwo");
         }
-        filePower.WinState = "N";
+        FileSnake.winning = "N";
     }
 
     public void OnButtonClick()

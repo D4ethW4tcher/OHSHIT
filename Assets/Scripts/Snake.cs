@@ -18,7 +18,10 @@ public class Snake : MonoBehaviour
     private readonly List<Transform> segments = new List<Transform>();
     private Vector2Int input;
     private float nextUpdate;
-    private Food filefood;
+    private Food FileFood;
+    public string winning = "N";
+    public string DoorOpen = "N";
+    private PowerUps FilePower;
 
     //player input manager
     private PlayerInput playerInput;
@@ -187,11 +190,11 @@ public class Snake : MonoBehaviour
     {
         if (other.gameObject.CompareTag("OpenDoorFood"))
         {
-            FileFood.powertype = "OpenDoor";
+            DoorOpen = "OpenDoor";
         }
         else if (other.gameObject.CompareTag("DoorLevel"))
         {
-            FileFood.powertype = "Win";
+            winning = "Win";
         }
         else if (other.gameObject.CompareTag("Obstacle"))
         {

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Wall
   - Obstacle
+  - Food
+  - DoorLevel
+  - OpenDoorFood
   layers:
   - Default
   - TransparentFX
