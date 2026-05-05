@@ -18,6 +18,7 @@ public class Snake : MonoBehaviour
     private readonly List<Transform> segments = new List<Transform>();
     private Vector2Int input;
     private float nextUpdate;
+    private Food filefood;
 
     //player input manager
     private PlayerInput playerInput;
@@ -184,9 +185,13 @@ public class Snake : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Food"))
+        if (other.gameObject.CompareTag("OpenDoorFood"))
         {
-            power.Powers();
+            FileFood.powertype = "OpenDoor";
+        }
+        else if (other.gameObject.CompareTag("DoorLevel"))
+        {
+            FileFood.powertype = "Win";
         }
         else if (other.gameObject.CompareTag("Obstacle"))
         {

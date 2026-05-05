@@ -37,7 +37,7 @@ public class LevelManagerDiff : MonoBehaviour
         else if (currentLevel == 1)
         {
             currentLevel++;
-            SceneManager.LoadScene("SecoundLevel");  // kept your spelling
+            SceneManager.LoadScene("LevelTwo");
         }
         filePower.WinState = "N";
     }

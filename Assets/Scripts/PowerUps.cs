@@ -4,6 +4,7 @@ public class PowerUps : MonoBehaviour
 {
     public Food FileFood;
     public Snake FileSnake;
+    private OpenDoor fileDoor;
     public int extraGrowCount = 2;
     public string WinState = "N";
     public void Powers()
@@ -35,6 +36,11 @@ public class PowerUps : MonoBehaviour
                 FileSnake.Grow();
             }
             extraGrowCount += 1;
+        }
+        if (FileFood.powertype == "OpenDoor")
+        {
+            fileDoor.door = true;
+            //nothing right now
         }
     }
 }

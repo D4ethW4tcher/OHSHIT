@@ -12,7 +12,7 @@ public class Food : MonoBehaviour
 
     private void Start()
     {
-    //    RandomizePosition();
+        RandomizePosition();
     }
 
     public void RandomizePosition()
@@ -34,7 +34,8 @@ public class Food : MonoBehaviour
                 x = Mathf.RoundToInt(bounds.min.x);
                 y++;
 
-                if (y > bounds.max.y) {
+                if (y > bounds.max.y)
+                {
                     y = Mathf.RoundToInt(bounds.min.y);
                 }
             }
@@ -45,7 +46,7 @@ public class Food : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        RandomizePosition();
+        Destroy(gameObject);
     }
 
 }
