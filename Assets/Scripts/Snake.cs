@@ -36,6 +36,10 @@ public class Snake : MonoBehaviour
         left = playerInput.actions["West"];
         right = playerInput.actions["East"];
         
+        Grow();
+        Grow();
+        Grow();
+        Grow();
         for (int i = 0; i < initialSize - 1; i++) {
            Grow();
         }
