@@ -9,6 +9,7 @@ TagManager:
   - Food
   - DoorLevel
   - OpenDoorFood
+  - AppleGrow
   layers:
   - Default
   - TransparentFX
