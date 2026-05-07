@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LevelManagerDiff : MonoBehaviour
 {
-    private int currentLevel = 0;
+    public int currentLevel = 0;
     public Button myButton;
     [SerializeField] private PowerUps filePower;
     private Snake FileSnake;
