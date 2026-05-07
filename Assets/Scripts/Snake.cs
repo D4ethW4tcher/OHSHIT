@@ -198,6 +198,10 @@ public class Snake : MonoBehaviour
         {
             winning = "Win";
         }
+        else if (other.gameObject.CompareTag("AppleGrow"))
+        {
+            Grow();
+        }
         else if (other.gameObject.CompareTag("Obstacle"))
         {
             DeathState();
