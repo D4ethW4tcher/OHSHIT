@@ -7,7 +7,7 @@ public class LevelManagerDiff : MonoBehaviour
 {
     public int currentLevel = 0;
     public Button myButton;
-    [SerializeField] private PowerUps FilePower;
+    private PowerUps FilePower;
     private Snake FileSnake;
 
     void Start()
