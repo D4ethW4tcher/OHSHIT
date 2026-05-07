@@ -22,6 +22,7 @@ public class Snake : MonoBehaviour
     public string winning = "N";
     public string DoorOpen = "N";
     private PowerUps FilePower;
+    private LevelManagerDiff FileLevel;
 
     //player input manager
     private PlayerInput playerInput;
@@ -131,6 +132,7 @@ public class Snake : MonoBehaviour
 
     public void DeathState()
     {
+        FileLevel.currentLevel = 0;
         SceneManager.LoadScene("MainMenu");
         /*    direction = Vector2Int.right;
             transform.position = Vector3.zero;
