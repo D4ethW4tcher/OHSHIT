@@ -209,6 +209,7 @@ public class Snake : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Wall"))
         {
+            DeathState();
             if (moveThroughWalls)
             {
                 Traverse(other.transform);
