@@ -1,15 +1,19 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class OpenDoor : MonoBehaviour
 {
-    public bool door = false;
-    public GameObject[] = Apples[];
+    public List<GameObject> Apples = new List<GameObject>();
 
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Apples[] == null)
+        if (Apples.Count == 0)
         {
             Destroy(gameObject);
         }
