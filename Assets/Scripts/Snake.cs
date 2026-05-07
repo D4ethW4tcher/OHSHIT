@@ -10,7 +10,7 @@ public class Snake : MonoBehaviour
     //variables
     public Transform segmentPrefab;
     public Vector2Int direction = Vector2Int.right;
-    public float speed = 2.5f;
+    public float speed = 8f;
     public float speedMultiplier = 1f;
     public int initialSize = 4;
     public bool moveThroughWalls = false;
@@ -32,6 +32,7 @@ public class Snake : MonoBehaviour
     private InputAction right;
 
     public PowerUps power;
+    public bool slowing = true;
 
     private void Start()
     {
@@ -201,6 +202,10 @@ public class Snake : MonoBehaviour
         else if (other.gameObject.CompareTag("AppleGrow"))
         {
             Grow();
+        }
+        else if (other.gameObject.CompareTag("BlueApple"))
+        {
+            slowing = true;
         }
         else if (other.gameObject.CompareTag("Obstacle"))
         {
