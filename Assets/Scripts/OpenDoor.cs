@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class OpenDoor : MonoBehaviour
 {
+    public bool door = false;
     public List<GameObject> Apples = new List<GameObject>();
 
     void Start()
