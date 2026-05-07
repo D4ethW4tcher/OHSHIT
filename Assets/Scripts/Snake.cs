@@ -207,10 +207,6 @@ public class Snake : MonoBehaviour
         {
             slowing = true;
         }
-        else if (other.gameObject.CompareTag("Obstacle"))
-        {
-            DeathState();
-        }
         else if (other.gameObject.CompareTag("Wall"))
         {
             if (moveThroughWalls)
