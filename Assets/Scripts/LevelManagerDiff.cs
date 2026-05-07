@@ -7,18 +7,22 @@ public class LevelManagerDiff : MonoBehaviour
 {
     public int currentLevel = 0;
     public Button myButton;
-    [SerializeField] private PowerUps filePower;
+    [SerializeField] private PowerUps FilePower;
     private Snake FileSnake;
 
     void Start()
     {
         myButton.onClick.AddListener(OnButtonClick);
-        filePower.WinState = "N";
+        FilePower.WinState = "N";
     }
 
     void LateUpdate()
     {
-        if (filePower.WinState == "Win" || FileSnake.winning == "Win")
+        if (FilePower.WinState == "Win")
+        {
+            LoadNextLevel();
+        }
+        if (FileSnake.winning == "Win")
         {
             LoadNextLevel();
         }
@@ -45,6 +49,6 @@ public class LevelManagerDiff : MonoBehaviour
 
     public void OnButtonClick()
     {
-        filePower.WinState = "Win";
+        FilePower.WinState = "Win";
     }
 }

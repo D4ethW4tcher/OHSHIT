@@ -8,31 +8,43 @@ using UnityEngine.SceneManagement;
 public class Snake : MonoBehaviour
 {
     //variables
-    public Transform segmentPrefab;
+
+
     public Vector2Int direction = Vector2Int.right;
     public float speed = 8f;
     public float speedMultiplier = 1f;
-    public int initialSize = 4;
     public bool moveThroughWalls = false;
-    //uhhh something i guess?
-    private readonly List<Transform> segments = new List<Transform>();
-    private Vector2Int input;
-    private float nextUpdate;
-    private Food FileFood;
+
+
+
+    public Transform segmentPrefab;
+    public int initialSize = 4;
+
     public string winning = "N";
     public string DoorOpen = "N";
+    public bool slowing = true;
+
+
+
+    private Food FileFood;
     private PowerUps FilePower;
     private LevelManagerDiff FileLevel;
 
-    //player input manager
+
+
+    private readonly List<Transform> segments = new List<Transform>();
+    private Vector2Int input;
+    private float nextUpdate;
+
+
+
     private PlayerInput playerInput;
+
     private InputAction up;
     private InputAction down;
     private InputAction left;
     private InputAction right;
 
-    public PowerUps power;
-    public bool slowing = true;
 
     private void Start()
     {
@@ -41,6 +53,7 @@ public class Snake : MonoBehaviour
         down = playerInput.actions["South"];
         left = playerInput.actions["West"];
         right = playerInput.actions["East"];
+        winning = "N";
 
         resetState();
 
@@ -120,6 +133,7 @@ public class Snake : MonoBehaviour
         int y = Mathf.RoundToInt(transform.position.y) + direction.y;
         transform.position = new Vector2(x, y);
 
+
         // Set the next update time based on the speed
         nextUpdate = Time.time + (1f / (speed * speedMultiplier));
     }
@@ -133,7 +147,7 @@ public class Snake : MonoBehaviour
 
     public void DeathState()
     {
-        FileLevel.currentLevel = 0;
+        
         SceneManager.LoadScene("MainMenu");
         /*    direction = Vector2Int.right;
             transform.position = Vector3.zero;
@@ -210,14 +224,6 @@ public class Snake : MonoBehaviour
         else if (other.gameObject.CompareTag("Wall"))
         {
             DeathState();
-            if (moveThroughWalls)
-            {
-                Traverse(other.transform);
-            }
-            else
-            {
-                DeathState();
-            }
         }
 
     }

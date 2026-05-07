@@ -950,8 +950,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 379221306}
-  - component: {fileID: 379221307}
   - component: {fileID: 379221308}
+  - component: {fileID: 379221307}
   m_Layer: 5
   m_Name: GameManager
   m_TagString: Untagged
@@ -987,12 +987,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 379221304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b42c403f1b02a548286c54bf9f505aa6, type: 3}
+  m_Script: {fileID: 11500000, guid: dd5997d27f4fb124f9ad35f6ccf0b67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerUps
-  currentLevel: 0
-  myButton: {fileID: 1925907602}
-  filePower: {fileID: 379221308}
+  FileFood: {fileID: 128379274}
+  FileSnake: {fileID: 847251048}
+  extraGrowCount: 2
+  WinState: N
 --- !u!114 &379221308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1002,13 +1003,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 379221304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338f92d40bfd66415ab62d60c5cd46f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 1970517af0b3a204c84fbd53179418f0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
-  FileFood: {fileID: 128379274}
-  FileSnake: {fileID: 847251048}
-  extraGrowCount: 2
-  WinState: N
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManagerDiff
+  currentLevel: 0
+  myButton: {fileID: 1925907602}
+  FilePower: {fileID: 379221307}
 --- !u!1 &390183830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,15 +1677,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b875c4e64261bcb479b7e67869e417e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Snake
-  segmentPrefab: {fileID: 0}
   direction: {x: 1, y: 0}
   speed: 2.5
   speedMultiplier: 1
-  initialSize: 4
   moveThroughWalls: 0
+  segmentPrefab: {fileID: 0}
+  initialSize: 4
   winning: N
   DoorOpen: N
-  power: {fileID: 0}
   slowing: 1
 --- !u!61 &847251049
 BoxCollider2D:
