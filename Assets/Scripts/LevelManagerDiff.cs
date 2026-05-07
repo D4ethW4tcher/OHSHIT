@@ -25,7 +25,7 @@ public class LevelManagerDiff : MonoBehaviour
     }
 
 
-    void LoadNextLevel()
+    public void LoadNextLevel()
     {
         // Reset win state first to prevent re-triggering
         
