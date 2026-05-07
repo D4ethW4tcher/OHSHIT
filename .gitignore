@@ -104,4 +104,7 @@ InitTestScene*.unity*
 OHSHIT/.vscode
 #meta files?
 *.cs.meta
-
+#rando stuff
+.directory
+Packages/manifest.json
+Packages/packages-lock.json
