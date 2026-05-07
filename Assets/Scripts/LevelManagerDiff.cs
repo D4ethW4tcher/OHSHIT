@@ -8,7 +8,7 @@ public class LevelManagerDiff : MonoBehaviour
     private int currentLevel = 0;
     public Button myButton;
     [SerializeField] private PowerUps filePower;
-    public Snake FileSnake;
+    private Snake FileSnake;
 
     void Start()
     {
@@ -33,7 +33,7 @@ public class LevelManagerDiff : MonoBehaviour
         if (currentLevel == 0)
         {
             currentLevel++;
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("LevelOne");
         }
         else if (currentLevel == 1)
         {
