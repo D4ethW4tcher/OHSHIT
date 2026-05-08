@@ -366,11 +366,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2150527926719052075, guid: fd8c7b9d0c855d24d8650ca7a4e5e2a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.4835987
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 2150527926719052075, guid: fd8c7b9d0c855d24d8650ca7a4e5e2a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.48891973
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2150527926719052075, guid: fd8c7b9d0c855d24d8650ca7a4e5e2a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -411,10 +411,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1548698240901998678, guid: fd8c7b9d0c855d24d8650ca7a4e5e2a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2006610833}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8c7b9d0c855d24d8650ca7a4e5e2a3, type: 3}
 --- !u!1 &130484705
 GameObject:
@@ -5528,7 +5525,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Food
   gridArea: {fileID: 785292248}
   powertype: Win
-  snake: {fileID: 1463271818}
 --- !u!61 &785292248
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5587,8 +5583,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5997d27f4fb124f9ad35f6ccf0b67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerUps
-  FileFood: {fileID: 2006610829}
-  FileSnake: {fileID: 1463271818}
+  FileFood: {fileID: 0}
+  FileSnake: {fileID: 0}
   extraGrowCount: 2
   WinState: N
 --- !u!1 &790307707
@@ -5696,8 +5692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenDoor
   door: 0
-  Apples:
-  - {fileID: 2006610828}
+  Apples: []
 --- !u!1 &801673651
 GameObject:
   m_ObjectHideFlags: 0
@@ -6891,7 +6886,6 @@ GameObject:
   m_Component:
   - component: {fileID: 928503114}
   - component: {fileID: 928503113}
-  - component: {fileID: 928503112}
   m_Layer: 0
   m_Name: gamemanager
   m_TagString: Untagged
@@ -6899,21 +6893,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &928503112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 928503111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1970517af0b3a204c84fbd53179418f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelManagerDiff
-  currentLevel: 1
-  myButton: {fileID: 1870254649}
-  FilePower: {fileID: 928503113}
 --- !u!114 &928503113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6923,13 +6902,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 928503111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd5997d27f4fb124f9ad35f6ccf0b67c, type: 3}
+  m_Script: {fileID: 11500000, guid: afdae4aa8687191a5a138c47290746ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerUps
-  FileFood: {fileID: 2006610829}
-  FileSnake: {fileID: 1463271818}
-  extraGrowCount: 2
-  WinState: N
+  currentLevel: 0
+  myButton: {fileID: 0}
 --- !u!4 &928503114
 Transform:
   m_ObjectHideFlags: 0
@@ -15094,38 +15071,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &2006610828 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1548698240901998678, guid: fd8c7b9d0c855d24d8650ca7a4e5e2a3, type: 3}
-  m_PrefabInstance: {fileID: 100917011}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2006610829 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5287591303044122331, guid: fd8c7b9d0c855d24d8650ca7a4e5e2a3, type: 3}
-  m_PrefabInstance: {fileID: 100917011}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2006610828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83fcf82957452fc45895f6c8b0732d37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Food
---- !u!114 &2006610833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2006610828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd5997d27f4fb124f9ad35f6ccf0b67c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PowerUps
-  FileFood: {fileID: 2006610829}
-  FileSnake: {fileID: 1463271818}
-  extraGrowCount: 2
-  WinState: N
 --- !u!1 &2055876454
 GameObject:
   m_ObjectHideFlags: 0
