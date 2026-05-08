@@ -75,13 +75,11 @@ public class Snake : MonoBehaviour
             if (up.IsPressed())
             {
                 input = Vector2Int.up;
-                Debug.Log("Go Up");
                 transform.eulerAngles = Vector3.forward * 0;
             }
             else if (down.IsPressed())
             {
                 input = Vector2Int.down;
-                Debug.Log("Go Down");
                 transform.eulerAngles = Vector3.forward * 180;
 
             }
@@ -92,13 +90,11 @@ public class Snake : MonoBehaviour
             if (right.IsPressed())
             {
                 input = Vector2Int.right;
-                Debug.Log("Go Right");
                 transform.eulerAngles = Vector3.forward * -90;
             }
             else if (left.IsPressed())
             {
                 input = Vector2Int.left;
-                Debug.Log("Go Left");
                 transform.eulerAngles = Vector3.forward * 90;
             }
         }

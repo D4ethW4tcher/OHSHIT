@@ -4,19 +4,19 @@ using System.Collections.Generic;
 public class OpenDoor : MonoBehaviour
 {
     public bool door = false;
-    public List<GameObject> Apples = new List<GameObject>();
+    public List<Food> Apples = new List<Food>();
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Apples.Count == 0)
         {
+            Debug.Log("Apples are gone");
             Destroy(gameObject);
         }
+    }
+
+    public void RemoveApple(Food apple)
+    {
+        Apples.Remove(apple);
     }
 }

@@ -4,14 +4,15 @@
 public class Food : MonoBehaviour
 {
     public Collider2D gridArea;
-    //private Snake snake;
     public string powertype = "N";
-    [SerializeField] private Snake snake;
-
-
+    private Snake snake;
+    private OpenDoor Door;
 
     private void Start()
     {
+        // Find the OpenDoor in the scene automatically
+        Door = FindObjectOfType<OpenDoor>();
+
         RandomizePosition();
     }
 
@@ -19,21 +20,16 @@ public class Food : MonoBehaviour
     {
         Bounds bounds = gridArea.bounds;
 
-        // Pick a random position inside the bounds
-        // Round the values to ensure it aligns with the grid
         int x = Mathf.RoundToInt(Random.Range(bounds.min.x, bounds.max.x));
         int y = Mathf.RoundToInt(Random.Range(bounds.min.y, bounds.max.y));
 
-        // Prevent the food from spawning on the snake
         while (snake.Occupies(x, y))
         {
             x++;
-
             if (x > bounds.max.x)
             {
                 x = Mathf.RoundToInt(bounds.min.x);
                 y++;
-
                 if (y > bounds.max.y)
                 {
                     y = Mathf.RoundToInt(bounds.min.y);
@@ -46,7 +42,7 @@ public class Food : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
+        Door.RemoveApple(this);
+        Destroy(gameObject);    
     }
-
 }

@@ -424,7 +424,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Food
   gridArea: {fileID: 0}
   powertype: Null
-  snake: {fileID: 0}
 --- !u!61 &128379275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -950,7 +949,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 379221306}
-  - component: {fileID: 379221308}
   - component: {fileID: 379221307}
   m_Layer: 5
   m_Name: GameManager
@@ -987,28 +985,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 379221304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd5997d27f4fb124f9ad35f6ccf0b67c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PowerUps
-  FileFood: {fileID: 128379274}
-  FileSnake: {fileID: 847251048}
-  extraGrowCount: 2
-  WinState: N
---- !u!114 &379221308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379221304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1970517af0b3a204c84fbd53179418f0, type: 3}
+  m_Script: {fileID: 11500000, guid: afdae4aa8687191a5a138c47290746ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManagerDiff
   currentLevel: 0
   myButton: {fileID: 1925907602}
-  FilePower: {fileID: 379221307}
 --- !u!1 &390183830
 GameObject:
   m_ObjectHideFlags: 0
@@ -3908,9 +3889,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 379221304}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 379221307}
+        m_TargetAssemblyTypeName: LevelManagerDiff, Assembly-CSharp
+        m_MethodName: LoadNextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
