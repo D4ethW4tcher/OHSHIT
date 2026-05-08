@@ -16,7 +16,7 @@ public class LevelManagerDiff : MonoBehaviour
         FilePower.WinState = "N";
     }
 
-    void LateUpdate()
+    void Update()
     {
         if (FilePower.WinState == "Win")
         {

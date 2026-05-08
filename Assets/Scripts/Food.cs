@@ -8,7 +8,7 @@ public class Food : MonoBehaviour
     private Snake snake;
     private OpenDoor Door;
 
-    private void Start()
+    void Start()
     {
         // Find the OpenDoor in the scene automatically
         Door = FindObjectOfType<OpenDoor>();
@@ -40,7 +40,7 @@ public class Food : MonoBehaviour
         transform.position = new Vector2(x, y);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         Door.RemoveApple(this);
         Destroy(gameObject);    
